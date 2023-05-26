@@ -19,6 +19,7 @@ model Course {
   description String
   rating      Float
   price       Float
+  student     Int
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
