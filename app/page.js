@@ -1,9 +1,14 @@
+
 const HomePage = () => {
   return (
-    <div>
-      <h1 className="text-2xl">welcome to study squad</h1>
-    </div>
+    <>
+      <h2>welcome to stuy sqa</h2>
+    </>
   );
 };
 
 export default HomePage;
+
+
+
+
