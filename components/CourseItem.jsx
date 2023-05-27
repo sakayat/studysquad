@@ -1,6 +1,7 @@
 import { currencyFormatter } from "@/utils/currencyFormatter";
 import Image from "next/image";
 import Link from "next/link";
+import Button from "./Button";
 
 const CourseItem = ({ course }) => {
 	return (
@@ -17,15 +18,24 @@ const CourseItem = ({ course }) => {
 				<h2>{course.title}</h2>
 				<div className="flex items-center justify-between">
 					<span>{course.instructor}</span>
-					<span>Duration: <span className="font-bold">{course.duration}</span> hours</span>
+					<span>
+						Duration: <span className="font-bold">{course.duration}</span> hours
+					</span>
 				</div>
-				<span>Enrolled Students: <span className="font-bold">{course.student}</span></span>
-				<span>Rating: <span className="font-bold">{course.rating}</span></span>
-				<p className="text-gray-400">{course.description.substring(0,100)}...</p>
+				<span>
+					Enrolled Students: <span className="font-bold">{course.student}</span>
+				</span>
+				<span>
+					Rating: <span className="font-bold">{course.rating}</span>
+				</span>
+				<p className="text-gray-400">{course.description.substring(0, 100)}...</p>
 				<span className="font-bold">{currencyFormatter(course.price)}</span>
-				<Link href={`${course.id}`} className="bg-white text-black py-2 px-4">
-					View Details
-				</Link>
+				<Button
+					href={`${course.id}`}
+					placeholder="View Details"
+					color="primary"
+					size="default"
+				/>
 			</div>
 		</div>
 	);
