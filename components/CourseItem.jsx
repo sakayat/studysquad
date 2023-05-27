@@ -5,7 +5,7 @@ import Button from "./Button";
 
 const CourseItem = ({ course }) => {
 	return (
-		<div className="flex flex-col justify-center shadow-lg gap-5">
+		<div className="bg-slate-950 text-white flex flex-col justify-center shadow-lg gap-5">
 			<Image
 				src={course.cover}
 				alt={course.title}
@@ -14,7 +14,7 @@ const CourseItem = ({ course }) => {
 				priority
 				className="w-full object-cover h-64"
 			/>
-			<div className="bg-slate-950 text-white flex flex-col gap-2 py-3 px-4">
+			<div className=" flex flex-col gap-2 py-3 px-4">
 				<h2>{course.title}</h2>
 				<div className="flex items-center justify-between">
 					<span>{course.instructor}</span>
@@ -31,7 +31,7 @@ const CourseItem = ({ course }) => {
 				<p className="text-gray-400">{course.description.substring(0, 100)}...</p>
 				<span className="font-bold">{currencyFormatter(course.price)}</span>
 				<Button
-					href={`${course.id}`}
+					href={`course/${course.id}`}
 					placeholder="View Details"
 					color="primary"
 					size="default"

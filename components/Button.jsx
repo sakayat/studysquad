@@ -9,10 +9,11 @@ const Button = ({ href, placeholder, color, size }) => {
 			color: {
 				primary: "bg-white text-black hover:bg-gray-400",
 				secondary: "bg-yellow-100 text-black",
+				info: "bg-black text-white text-center"
 			},
 			size: {
 				default: "py-3 px-6",
-				full: "",
+				full: "w-full",
 			},
 		},
 		defaultVariants: {

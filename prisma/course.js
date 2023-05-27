@@ -2,7 +2,7 @@ import prisma from "./prisma";
 
 // get all courses
 export const getAllCourse = async () => {
-  const courses = await prisma.course.findMany();
+  const courses = await prisma.course.findMany({});
   return courses;
 };
 
