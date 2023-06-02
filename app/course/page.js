@@ -5,7 +5,7 @@ import { getAllCourse } from "@/prisma/course";
 const CoursePage = async () => {
 	const courses = await getAllCourse();
 	return (
-		<>
+		<div className="py-10">
     <SectionHeader
 			span="courses"
 			h2="Browse all courses"
@@ -19,7 +19,7 @@ const CoursePage = async () => {
       ))
     }
    </div>
-    </>
+    </div>
 	);
 };
 

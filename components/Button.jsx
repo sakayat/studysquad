@@ -7,9 +7,9 @@ const Button = ({ href, placeholder, color, size }) => {
 	const buttonVariance = cva("rounded-lg", {
 		variants: {
 			color: {
-				primary: "bg-white text-black hover:bg-gray-400",
-				secondary: "bg-yellow-100 text-black",
-				info: "bg-black text-white text-center"
+				primary: "uppercase bg-white text-black hover:bg-yellow-200",
+				secondary: "uppercase bg-yellow-200 text-black hover:bg-white",
+				info: "uppercase text-center bg-yellow-200 hover:bg-black hover:text-white"
 			},
 			size: {
 				default: "py-3 px-6",
