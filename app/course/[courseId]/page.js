@@ -1,4 +1,3 @@
-import Button from "@/components/Button";
 import Course from "@/components/Course";
 import { getCourse } from "@/prisma/course";
 
