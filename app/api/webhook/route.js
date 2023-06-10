@@ -1,5 +1,4 @@
 import Stripe from "stripe";
-import { buffer } from "micro";
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/prisma/prisma";
 import { headers } from "next/headers";
