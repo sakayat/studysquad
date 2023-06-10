@@ -12,9 +12,9 @@ const Navbar = () => {
 
   const { data: session } = useSession();
   return (
-    <div className="bg-black text-[#8fb4ff]">
+    <div className="bg-gray-900 text-[#8fb4ff]">
       <nav className="container mx-auto flex items-center justify-between h-20">
-        <Link href="/" className="logo text-[#ebf1ff] hover:text-[#8fb4ff]">
+        <Link href="/" className="logo font-semibold text-xl tracking-tight">
           studysquad
         </Link>
         <div className="links flex gap-5">
