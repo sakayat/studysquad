@@ -3,49 +3,53 @@ import Link from "next/link";
 import Button from "./Button";
 import { useSession } from "next-auth/react";
 const Navbar = () => {
-	const { data: session } = useSession();
-	return (
-		<div className="bg-black text-white">
-			<nav className="container mx-auto flex items-center justify-between h-20">
-				<Link href="/" className="logo text-yellow-200">
-					studysquad
-				</Link>
-				<div className="links flex gap-5">
-					<Link href="/" className="hover:text-yellow-200 transition-colors">
-						Home
-					</Link>
-					<Link href="/course" className="hover:text-yellow-200 transition-colors">
-						Course
-					</Link>
-					<Link href="/about" className="hover:text-yellow-200 transition-colors">
-						About
-					</Link>
-					<Link href="/contact" className="hover:text-yellow-200transition-colors">
-						Contact
-					</Link>
-				</div>
-				<div className="user">
-					{session ? (
-						<Button
-							href="/user/profile"
-							placeholder="Profile"
-							className="hover:text-yellow-200transition-colors"
-							color="secondary"
-							size="default"
-						/>
-					) : (
-						<Button
-							href="user/login"
-							placeholder="Login"
-							className="hover:text-yellow-200transition-colors"
-							color="secondary"
-							size="default"
-						/>
-					)}
-				</div>
-			</nav>
-		</div>
-	);
+  const links = [
+    { href: "/", text: "Home" },
+    { href: "/course", text: "Course" },
+    { href: "/about", text: "About" },
+    { href: "/contact", text: "Contact" },
+  ];
+
+  const { data: session } = useSession();
+  return (
+    <div className="bg-black text-[#8fb4ff]">
+      <nav className="container mx-auto flex items-center justify-between h-20">
+        <Link href="/" className="logo text-[#ebf1ff] hover:text-[#8fb4ff]">
+          studysquad
+        </Link>
+        <div className="links flex gap-5">
+          {links.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="hover:text-[#ebf1ff] transition-colors"
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
+        <div className="user">
+          {session ? (
+            <Button
+              href="/user/profile"
+              placeholder="Profile"
+              className="hover:text-yellow-200transition-colors"
+              color="primary"
+              size="default"
+            />
+          ) : (
+            <Button
+              href="user/login"
+              placeholder="Login"
+              className="hover:text-yellow-200transition-colors"
+              color="primary"
+              size="default"
+            />
+          )}
+        </div>
+      </nav>
+    </div>
+  );
 };
 
 export default Navbar;

@@ -2,7 +2,6 @@
 import { currencyFormatter } from "@/utils/currencyFormatter";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
-import Button from "./Button";
 
 const Course = ({ course }) => {
 	const router = useRouter();
@@ -40,12 +39,7 @@ const Course = ({ course }) => {
 						<span>
 							Price: <span className="font-bold"> {currencyFormatter(course.price)}</span>
 						</span>
-						<Button
-							href={`checkout/${course.id}`}
-							placeholder="Enroll Now"
-							color="info"
-							size="default"
-						/>
+						<button onClick={handleEnroll} className="uppercase text-center bg-[#8fb4ff] hover:bg-[#ff8f94] rounded-lg py-3">enroll now</button>
 					</div>
 				</div>
 			</div>

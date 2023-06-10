@@ -34,7 +34,7 @@ const CourseItem = ({ course }) => {
 					href={`course/${course.id}`}
 					placeholder="View Details"
 					color="primary"
-					size="default"
+					size="full"
 				/>
 			</div>
 		</div>
