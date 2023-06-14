@@ -5,7 +5,7 @@ import { getAllCourse } from "@/prisma/course";
 const CoursePage = async () => {
 	const courses = await getAllCourse();
 	return (
-		<div className="py-10">
+		<div className="py-10 mb-24">
     <SectionHeader
 			span="courses"
 			h2="Browse all courses"

@@ -9,8 +9,6 @@ const Course = ({ course }) => {
   const handleEnroll = () => {
     if (session) {
       router.replace(`/checkout/${course.id}`);
-    } else {
-      router.replace(`/user/login?redirect=/checkout/${course.id}`);
     }
   };
 
