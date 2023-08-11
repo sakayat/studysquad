@@ -1,5 +1,5 @@
 import Button from "@/components/Button";
-const Order = ({ course, session }) => {
+const Order = ({ course }) => {
   return (
     <div className="order-course-content">
       <div className="border p-4">

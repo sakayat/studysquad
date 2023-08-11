@@ -1,4 +1,4 @@
-import { currencyFormatter } from "@/utils/currencyFormatter";
+import { currencyFormatter } from "@/lib/currencyFormatter";
 import Image from "next/image";
 import Button from "./Button";
 

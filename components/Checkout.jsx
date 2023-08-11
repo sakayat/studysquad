@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-import { currencyFormatter } from "@/utils/currencyFormatter";
+import { currencyFormatter } from "@/lib/currencyFormatter";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 

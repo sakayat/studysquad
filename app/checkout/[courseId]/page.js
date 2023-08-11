@@ -1,19 +1,9 @@
-import Checkout from "@/components/Checkout";
-import SectionHeader from "@/components/SectionHeader";
-import { getCourse } from "@/prisma/course";
+import React from 'react'
 
-const CheckoutPage = async ({ params }) => {
-	const course = await getCourse(params.courseId);
-	return (
-		<div className="py-5 mb-24">
-			<SectionHeader
-				span="checkout"
-				h2="please provide your details"
-				p="fill out the form and continue to checkout"
-			/>
-			<Checkout course={course}/>
-		</div>
-	);
-};
+const CheckOutPage = () => {
+  return (
+	<div>CheckOutPage</div>
+  )
+}
 
-export default CheckoutPage;
+export default CheckOutPage

@@ -1,11 +1,11 @@
 import Stripe from "stripe";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import prisma from "@/prisma/prisma";
 import { headers } from "next/headers";
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET_KEY;
 
-const fullfillOrder = async (session) => {
+const fullFillOrder = async (session) => {
   let user = await prisma.user.findUnique({
     where: { email: session.metadata.email },
   });
@@ -43,7 +43,7 @@ export async function POST(request) {
   if (event.type === "checkout.session.completed") {
     const session = event.data.object;
     try {
-      await fullfillOrder(session);
+      await fullFillOrder(session);
     } catch (error) {
       return NextResponse.json({ error: "DB Error" });
     }

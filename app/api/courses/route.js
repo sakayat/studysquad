@@ -1,7 +1,10 @@
 import { getAllCourse } from "@/prisma/course";
 import { NextResponse } from "next/server";
 
-export async function GET(Request) {
+
+
+
+export async function GET(req) {
   try {
     const courses = await getAllCourse();
     return NextResponse.json(courses);

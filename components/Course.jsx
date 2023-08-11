@@ -1,5 +1,5 @@
 "use client";
-import { currencyFormatter } from "@/utils/currencyFormatter";
+import { currencyFormatter } from "@/lib/currencyFormatter";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
