@@ -16,16 +16,16 @@ const Navbar = () => {
 //   }
 
   return (
-    <div className="bg-gray-900">
-      <nav className="container mx-auto flex items-center justify-between h-20 border-b">
+    <div className="bg-gray-900  w-full">
+      <nav className="container mx-auto flex items-center justify-between h-20">
         <Link
           href="/"
-          className="logo tracking-[2px] uppercase flex items-center gap-2"
+          className="logo tracking-[2px] flex items-center gap-2"
         >
           <span>
             <AiFillBuild />
           </span>
-          studysquad
+          <span>studysquad</span>
         </Link>
         <div className="links flex gap-14">
           {links.map((link) => (

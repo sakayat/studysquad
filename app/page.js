@@ -1,16 +1,12 @@
-import CoursePage from "./course/page";
+import Hero from "@/components/Hero";
 
 
 const HomePage = () => {
   return (
     <>
-      <CoursePage />
+      <Hero />
     </>
   );
 };
 
 export default HomePage;
-
-
-
-

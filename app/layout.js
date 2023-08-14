@@ -7,20 +7,20 @@ import Footer from "@/components/Footer";
 const lato = Lato({ weight: "400", subsets: ["latin"] });
 
 export const metadata = {
-	title: "Study Squad",
-	description: "Study Squad",
+  title: "Study Squad",
+  description: "Study Squad",
 };
 
 export default function RootLayout({ children }) {
-	return (
-		<html  lang="en">
-			<body className={lato.className}>
-				<Provider>
-					<Navbar />
-					<main className="container mx-auto">{children}</main>
-					<Footer />
-				</Provider>
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={lato.className}>
+        <Provider>
+          <Navbar />
+          {children}
+          <Footer />
+        </Provider>
+      </body>
+    </html>
+  );
 }

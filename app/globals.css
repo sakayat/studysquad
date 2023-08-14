@@ -5,3 +5,12 @@
 body {
  @apply bg-gray-900 text-[#90EE90]
 }
+
+@layer{
+    .hero-img{
+         background-image: url("/images/bg.jpg");
+    }
+    .bg-linear{
+        background: linear-gradient(90deg,rgb(4,28,45) 42%,rgba(0,0,0,0) 68%);
+    }
+}

@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Link from "next/link";
 
 const Button = ({ href, placeholder, color, size }) => {
-  const buttonVariance = cva("rounded-lg", {
+  const buttonVariance = cva("", {
     variants: {
       color: {
         primary: "text-black bg-[#90EE90] hover:bg-white",
@@ -12,6 +12,7 @@ const Button = ({ href, placeholder, color, size }) => {
       size: {
         default: "py-3 px-8",
         full: "w-full text-center py-3 px-6",
+        heroBtn: "w-fit py-3 px-8"
       },
     },
     defaultVariants: {
