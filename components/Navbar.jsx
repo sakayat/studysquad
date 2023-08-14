@@ -16,8 +16,8 @@ const Navbar = () => {
 //   }
 
   return (
-    <div className="bg-gray-900  w-full">
-      <nav className="container mx-auto flex items-center justify-between h-20">
+    <div className="bg-gray-900 fixed w-full z-[10]">
+      <nav className="container mx-auto flex items-center justify-between h-20 px-8">
         <Link
           href="/"
           className="logo tracking-[2px] flex items-center gap-2"
@@ -40,8 +40,8 @@ const Navbar = () => {
         </div>
         <div className="user">
           <Button
-            href="/user/profile"
-            placeholder="Profile"
+            href="/user/login"
+            placeholder="Login"
             className="hover:text-yellow-200 transition-colors"
             color="primary"
             size="default"

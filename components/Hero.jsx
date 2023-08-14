@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const Hero = () => {
   return (
-    <div className="flex items-center justify-center bg-center bg-cover hero-img relative z-[2] overflow-hidden">
+    <div className="flex items-center justify-center bg-center bg-cover hero-img relative overflow-hidden">
       <div className="absolute top-0 left-0 bottom-0 right-0 bg-black/75" />
       <div className="flex items-center justify-start w-full z-[5] bg-linear min-h-screen">
         <div className="container mx-auto px-8">
