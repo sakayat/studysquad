@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={lato.className}>
         <Provider>
           <Navbar />
-          {children}
+          <main className="min-h-[calc(100vh-5rem)]">{children}</main>
           <Footer />
         </Provider>
       </body>

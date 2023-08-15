@@ -7,9 +7,9 @@ const LoginPage = () => {
     <div className="flex items-center justify-center min-h-[calc(100vh-5rem)]">
       <button
         onClick={() => signIn("google")}
-        className="text-black bg-[#90EE90] hover:bg-white flex items-center gap-3 py-3 px-8"
+        className="text-black bg-[#90EE90] hover:bg-white flex items-center gap-4 py-3 px-8"
       >
-        <FcGoogle /> <span>Login with gmail</span>
+        <FcGoogle size={30}/> <span>Login with gmail</span>
       </button>
     </div>
   );

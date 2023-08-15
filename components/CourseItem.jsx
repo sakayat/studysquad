@@ -1,20 +1,20 @@
 import { currencyFormatter } from "@/lib/currencyFormatter";
 import Image from "next/image";
-import Button from "./Button";
+import Link from "next/link";
 
 const CourseItem = ({ course }) => {
   return (
-    <div className="flex flex-col justify-center shadow-lg gap-5">
+    <div className="bg-white text-black">
       <Image
         src={course.cover}
         alt={course.title}
         width={400}
         height={400}
         priority
-        className="w-full object-cover h-64"
+        className="w-full h-72"
       />
-      <div className="bg-black text-white rounded-md flex flex-col gap-2 py-3 px-4">
-        <h2>{course.title}</h2>
+      <div className="flex flex-col justify-between gap-3 py-3 px-4">
+        <h2 className="font-semibold">{course.title}</h2>
         <div className="flex items-center justify-between">
           <span>{course.instructor}</span>
           <span>
@@ -27,16 +27,11 @@ const CourseItem = ({ course }) => {
         <span>
           Rating: <span className="font-bold">{course.rating}</span>
         </span>
-        <p className="text-gray-400">
-          {course.description.substring(0, 100)}...
+        <p className="text-gray-500">
+          {course.description.substring(0, 100)}
         </p>
         <span className="font-bold">{currencyFormatter(course.price)}</span>
-        <Button
-          href={`course/${course.id}`}
-          placeholder="View Details"
-          color="primary"
-          size="full"
-        />
+        <Link href={`course/${course.id}`} className="font-bold">View Details</Link>
       </div>
     </div>
   );

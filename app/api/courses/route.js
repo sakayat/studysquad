@@ -2,8 +2,6 @@ import { getAllCourse } from "@/prisma/course";
 import { NextResponse } from "next/server";
 
 
-
-
 export async function GET(req) {
   try {
     const courses = await getAllCourse();
