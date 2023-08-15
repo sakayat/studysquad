@@ -46,7 +46,7 @@ const CheckoutPage = ({ course }) => {
     <div className="checkout flex justify-center">
       <form
         onSubmit={handleCheckout}
-        className="w-full lg:w-[35rem] flex flex-col gap-5"
+        className="w-full lg:w-[45rem] flex flex-col gap-8"
       >
         <div className="form-control flex flex-col gap-2">
           <label htmlFor="username">Name</label>
@@ -56,7 +56,7 @@ const CheckoutPage = ({ course }) => {
             placeholder="jon"
             readOnly
             value={formData.name}
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
           />
         </div>
         <div className="form-control flex flex-col gap-2">
@@ -67,7 +67,7 @@ const CheckoutPage = ({ course }) => {
             placeholder="jon@gmail.com"
             readOnly
             value={formData.email}
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
           />
         </div>
         <div className="form-control flex flex-col gap-2">
@@ -80,7 +80,7 @@ const CheckoutPage = ({ course }) => {
             onChange={(e) =>
               setFormData({ ...formData, mobile: e.target.value })
             }
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
             required
           />
         </div>
@@ -94,7 +94,7 @@ const CheckoutPage = ({ course }) => {
             onChange={(e) =>
               setFormData({ ...formData, address: e.target.value })
             }
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
           />
         </div>
         <div className="form-control flex flex-col gap-2">
@@ -105,7 +105,7 @@ const CheckoutPage = ({ course }) => {
             placeholder="Course Title"
             readOnly
             value={formData.courseTitle}
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
           />
         </div>
         <div className="form-control flex flex-col gap-2">
@@ -116,7 +116,7 @@ const CheckoutPage = ({ course }) => {
             placeholder="price"
             readOnly
             value={currencyFormatter(formData.price)}
-            className="outline-none bg-inherit border py-3 px-4 rounded-md"
+            className="outline-none bg-inherit border py-3 px-4"
           />
         </div>
         <button
