@@ -5,8 +5,8 @@ import { currencyFormatter } from "@/lib/currencyFormatter";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 
-const Checkout = ({ course }) => {
-  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
+const CheckoutPage = ({ course }) => {
+  const stripePromise = loadStripe(`${process.env.STRIPE_PUBLIC_KEY}`);
   const { data: session } = useSession();
   const [formData, setFormData] = useState({
     name: "",
@@ -39,10 +39,7 @@ const Checkout = ({ course }) => {
       courseTitle: formData.courseTitle,
       courseId: course.id,
     });
-    const result = await stripe.redirectToCheckout({ sessionId: data.id });
-    if (result.error) {
-      console.log(result.error);
-    }
+     await stripe.redirectToCheckout({ sessionId: data.id });
   };
 
   return (
@@ -124,7 +121,7 @@ const Checkout = ({ course }) => {
         </div>
         <button
           role="link"
-          className="bg-[#8fb4ff] text-black hover:bg-[#ff8f94] py-3 px-4 rounded-lg"
+          className="text-black bg-[#90EE90] hover:bg-white py-3"
         >
           Proceed to Checkout
         </button>
@@ -133,4 +130,4 @@ const Checkout = ({ course }) => {
   );
 };
 
-export default Checkout;
+export default CheckoutPage;
