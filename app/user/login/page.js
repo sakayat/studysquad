@@ -1,8 +1,13 @@
 "use client";
 import { FcGoogle } from "react-icons/fc";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { redirect } from "next/navigation";
 
 const LoginPage = () => {
+  const {data: session} = useSession()
+  if(session){
+    redirect("/")
+  }
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-5rem)]">
       <button
